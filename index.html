@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morning Core Lab · 모닝 코어 랩</title>
+  <meta name="description" content="SMCC 콘텐츠팀 무료 크리에이티브 작업실" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== App Shell ===== -->
+  <div class="app">
+
+    <!-- ===== Sidebar (PC) ===== -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">☕</div>
+        <div class="brand-text">
+          <span class="brand-en">Morning Core Lab</span>
+          <span class="brand-kr">모닝 코어 랩</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="sideNav">
+        <button class="nav-item active" data-screen="home">
+          <span class="nav-emoji">🏠</span>
+          <span class="nav-label"><b>Home</b><small>홈</small></span>
+        </button>
+        <button class="nav-item" data-screen="drop">
+          <span class="nav-emoji">🌅</span>
+          <span class="nav-label"><b>Morning Drop</b><small>오늘의 새 레퍼런스</small></span>
+        </button>
+        <button class="nav-item" data-screen="room">
+          <span class="nav-emoji">🗂️</span>
+          <span class="nav-label"><b>Reference Room</b><small>레퍼런스 공유룸</small></span>
+        </button>
+        <button class="nav-item" data-screen="emotional">
+          <span class="nav-emoji">🎞️</span>
+          <span class="nav-label"><b>Emotional Core</b><small>감성 코어</small></span>
+        </button>
+        <button class="nav-item" data-screen="funny">
+          <span class="nav-emoji">😂</span>
+          <span class="nav-label"><b>Funny Core</b><small>유머 코어</small></span>
+        </button>
+        <button class="nav-item" data-screen="meeting">
+          <span class="nav-emoji">🪑</span>
+          <span class="nav-label"><b>Meeting Mode</b><small>회의 모드</small></span>
+        </button>
+        <button class="nav-item" data-screen="insta">
+          <span class="nav-emoji">📈</span>
+          <span class="nav-label"><b>Instagram Core</b><small>팔로우 전환율 분석</small></span>
+        </button>
+        <button class="nav-item" data-screen="production">
+          <span class="nav-emoji">🎬</span>
+          <span class="nav-label"><b>Production Board</b><small>제작 보드</small></span>
+        </button>
+        <button class="nav-item" data-screen="copy">
+          <span class="nav-emoji">✏️</span>
+          <span class="nav-label"><b>Copy Bank</b><small>카피 뱅크</small></span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p class="kpi-pill">🚀 Top KPI · 팔로우 전환율</p>
+        <p class="free-note">Free build · 무료 원칙</p>
+      </div>
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1 id="screenTitleEn">Home</h1>
+          <p id="screenTitleKr">홈</p>
+        </div>
+        <div class="topbar-tag">7AM is the new 2AM</div>
+      </header>
+
+      <section class="screen-wrap" id="screenWrap">
+        <!-- screens injected by app.js -->
+      </section>
+    </main>
+
+    <!-- ===== Detail Panel (PC right) ===== -->
+    <aside class="detail-panel" id="detailPanel">
+      <div class="detail-empty">
+        <div class="detail-empty-emoji">🫧</div>
+        <p class="detail-empty-en">Pick a reference</p>
+        <p class="detail-empty-kr">카드를 선택하면 여기에 상세가 보여요</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== Mobile Bottom Tabs ===== -->
+  <nav class="bottom-tabs" id="bottomTabs">
+    <button class="tab active" data-screen="home"><span>🏠</span>Home</button>
+    <button class="tab" data-screen="drop"><span>🌅</span>Drop</button>
+    <button class="tab" data-screen="room"><span>🗂️</span>Room</button>
+    <button class="tab" data-screen="insta"><span>📈</span>Insta</button>
+    <button class="tab" data-screen="more"><span>⋯</span>More</button>
+  </nav>
+
+  <!-- ===== Mobile "More" sheet ===== -->
+  <div class="more-sheet" id="moreSheet">
+    <div class="more-sheet-inner">
+      <div class="more-handle"></div>
+      <h3>More · 더 보기</h3>
+      <div class="more-grid">
+        <button data-screen="emotional">🎞️ Emotional<small>감성 코어</small></button>
+        <button data-screen="funny">😂 Funny<small>유머 코어</small></button>
+        <button data-screen="meeting">🪑 Meeting<small>회의 모드</small></button>
+        <button data-screen="production">🎬 Production<small>제작 보드</small></button>
+        <button data-screen="copy">✏️ Copy Bank<small>카피 뱅크</small></button>
+      </div>
+      <button class="more-close" id="moreClose">Close · 닫기</button>
+    </div>
+  </div>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
